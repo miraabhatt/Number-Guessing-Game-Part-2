@@ -18,39 +18,119 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzT-3i-z7Y">
-                                <rect key="frame" x="145" y="219" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Eh-Hq-LgO">
-                                <rect key="frame" x="141" y="288" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ofg-JJ-jwu">
-                                <rect key="frame" x="74" y="453" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2V-rd-hRF">
+                                <rect key="frame" x="0.0" y="235.5" width="375" height="216"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zef-5q-Vrc">
+                                        <rect key="frame" x="0.0" y="74" width="375" height="68.5"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UEN-2u-u4W">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JP9-O8-QHo"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Eh-Hq-LgO">
+                                                <rect key="frame" x="164.5" y="38.5" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="makeAGuess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vvt-0x-P16"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="UEN-2u-u4W" firstAttribute="centerX" secondItem="Zef-5q-Vrc" secondAttribute="centerX" id="3bL-KH-x7G"/>
+                                            <constraint firstItem="8Eh-Hq-LgO" firstAttribute="top" secondItem="UEN-2u-u4W" secondAttribute="bottom" constant="8.5" id="KLb-wy-vck"/>
+                                            <constraint firstItem="UEN-2u-u4W" firstAttribute="width" secondItem="Zef-5q-Vrc" secondAttribute="width" id="KOR-mw-cJv"/>
+                                            <constraint firstAttribute="bottom" secondItem="8Eh-Hq-LgO" secondAttribute="bottom" id="P88-vB-wmM"/>
+                                            <constraint firstItem="8Eh-Hq-LgO" firstAttribute="centerX" secondItem="Zef-5q-Vrc" secondAttribute="centerX" id="lHv-H9-Yfn"/>
+                                            <constraint firstItem="UEN-2u-u4W" firstAttribute="top" secondItem="Zef-5q-Vrc" secondAttribute="top" id="z36-N2-aaa"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UEN-2u-u4W">
-                                <rect key="frame" x="132" y="372" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <constraints>
+                                    <constraint firstItem="Zef-5q-Vrc" firstAttribute="centerX" secondItem="P2V-rd-hRF" secondAttribute="centerX" id="2TP-Yy-oZd"/>
+                                    <constraint firstItem="Zef-5q-Vrc" firstAttribute="centerY" secondItem="P2V-rd-hRF" secondAttribute="centerY" id="SKJ-sj-q9p"/>
+                                    <constraint firstItem="Zef-5q-Vrc" firstAttribute="width" secondItem="P2V-rd-hRF" secondAttribute="width" id="pQb-Bn-tg3"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Mu-Iv-UuY">
+                                <rect key="frame" x="0.0" y="20" width="375" height="215.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzT-3i-z7Y">
+                                        <rect key="frame" x="0.0" y="97.5" width="375" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="RzT-3i-z7Y" firstAttribute="centerX" secondItem="8Mu-Iv-UuY" secondAttribute="centerX" id="Ell-05-MLX"/>
+                                    <constraint firstItem="RzT-3i-z7Y" firstAttribute="centerY" secondItem="8Mu-Iv-UuY" secondAttribute="centerY" id="KSQ-nM-DiT"/>
+                                    <constraint firstItem="RzT-3i-z7Y" firstAttribute="width" secondItem="8Mu-Iv-UuY" secondAttribute="width" id="YwS-Sq-Apd"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rpA-0d-L2y">
+                                <rect key="frame" x="0.0" y="451.5" width="375" height="215.5"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ofg-JJ-jwu">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="215.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Ofg-JJ-jwu" firstAttribute="centerY" secondItem="rpA-0d-L2y" secondAttribute="centerY" id="F5A-Zu-V4d"/>
+                                    <constraint firstItem="Ofg-JJ-jwu" firstAttribute="centerX" secondItem="rpA-0d-L2y" secondAttribute="centerX" id="XgK-5J-PV0"/>
+                                    <constraint firstItem="Ofg-JJ-jwu" firstAttribute="height" secondItem="rpA-0d-L2y" secondAttribute="height" id="bxT-aF-HJa"/>
+                                    <constraint firstItem="Ofg-JJ-jwu" firstAttribute="width" secondItem="rpA-0d-L2y" secondAttribute="width" id="foG-rV-Ija"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="P2V-rd-hRF" firstAttribute="top" secondItem="8Mu-Iv-UuY" secondAttribute="bottom" id="DdK-Fh-hSr"/>
+                            <constraint firstItem="rpA-0d-L2y" firstAttribute="top" secondItem="P2V-rd-hRF" secondAttribute="bottom" id="I6c-ca-Gpq"/>
+                            <constraint firstItem="rpA-0d-L2y" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Mo8-1u-Rci"/>
+                            <constraint firstItem="8Mu-Iv-UuY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NGn-Sk-Bth"/>
+                            <constraint firstItem="8Mu-Iv-UuY" firstAttribute="height" secondItem="P2V-rd-hRF" secondAttribute="height" id="XdN-Yx-8qd"/>
+                            <constraint firstItem="P2V-rd-hRF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="YsJ-L9-PK9"/>
+                            <constraint firstItem="P2V-rd-hRF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Yzl-Pf-A88"/>
+                            <constraint firstItem="8Mu-Iv-UuY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Z8V-nW-6GZ"/>
+                            <constraint firstItem="rpA-0d-L2y" firstAttribute="height" secondItem="P2V-rd-hRF" secondAttribute="height" id="aws-px-oEy"/>
+                            <constraint firstItem="rpA-0d-L2y" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="dbr-wO-xyY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rpA-0d-L2y" secondAttribute="bottom" id="tQy-9E-E32"/>
+                            <constraint firstItem="8Mu-Iv-UuY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wbd-Un-Zrt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="9Ue-XE-jUv" appends="YES" id="Gs9-al-TTV"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="guessButton" destination="8Eh-Hq-LgO" id="VyF-n8-A48"/>
+                        <outlet property="guessTextField" destination="UEN-2u-u4W" id="3Ql-8Z-Gs9"/>
+                        <outlet property="messageLabel" destination="RzT-3i-z7Y" id="EHW-8k-Nov"/>
+                        <outlet property="messagesTextView" destination="Ofg-JJ-jwu" id="Iwu-wv-EXD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9Ue-XE-jUv">
+                    <connections>
+                        <action selector="hideKeyboard:" destination="BYZ-38-t0r" id="jQd-Pi-xnQ"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="HSQ-g1-bKB"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>
