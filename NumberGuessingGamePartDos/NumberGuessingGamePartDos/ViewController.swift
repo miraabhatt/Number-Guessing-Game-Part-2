@@ -10,11 +10,33 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var guessButton: UIButton!
+    @IBOutlet weak var messagesTextView: UITextView!
+    @IBOutlet weak var guessTextField: UITextField!
+    @IBOutlet weak var messageLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func makeAGuess(_ sender: Any) {
+    }
+    
+    @IBAction func hideKeyboard(_ sender: Any) {
+    }
 }
 
+extension ViewController:UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+    }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return true
+    }
+}
+
+extension ViewController:UIGestureRecognizerDelegate {
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+}
