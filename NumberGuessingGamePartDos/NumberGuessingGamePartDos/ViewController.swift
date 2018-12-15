@@ -62,6 +62,9 @@ extension ViewController:UITextFieldDelegate {
 
 extension ViewController:UIGestureRecognizerDelegate {
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if gestureRecognizer.location(in: guessButton.superview).x > guessButton.frame.minX && gestureRecognizer.location(in: guessButton.superview).x < guessButton.frame.maxX && gestureRecognizer.location(in: guessButton.superview).y > guessButton.frame.minY && gestureRecognizer.location(in: guessButton.superview).y < guessButton.frame.maxY {
+            return false
+        }
         return true
     }
 }
