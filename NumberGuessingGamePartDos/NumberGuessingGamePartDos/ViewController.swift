@@ -40,7 +40,9 @@ class ViewController: UIViewController {
 
 extension ViewController:UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        guessButton.isEnabled = true 
+        // test whether textField.text is equal to nil, if so disable guessButton, else enable it
+            guessButton.isEnabled = true 
+        
     }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         // use a guard statement to unwrap textField.text and on else return true, this means that if the textfield is empty, then it will return true for should the new characters be added.
@@ -50,8 +52,6 @@ extension ViewController:UITextFieldDelegate {
         // if newLength == 0 { disable guessButton} else {guessButton enable}
         if newLength == 0 {guessButton.isEnabled = false}
         else {guessButtion.isEnabled = true} 
-            
-        
         // return newLength is less than or equal to MAX_LENGTH_OF_TEXT_FIELD, this will return true and say the new characters should be added only if the new number of characters is less than or equal to the max number of characters allowed
         return newLength <= MAX_LENGTH_OF_TEXT_FIELD 
     }
