@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     // declare a variable called MAX_LENGTH_OF_TEXT_FIELD and place a block next to it that returns 1 this will be used in limiting the number of characters, when you place a {} block after a variable declaration, it creates a computed property, or a property who's value is calculated at run time, you can explicitly set getters and setters within the block using get {} and set(newValue) {} if you omit both get and set and return a value, it by default creates this return as a getter.  computed properties must explicitly be given a type, like var MAX_TEXT_FIELD_CHARS:Int { }
     var MAX_LENGTH_OF_TEXT_FIELD:Int {
         // change this to be the "".count of an interpolated MAX_RANDOM_NUMBER into a string, this means take the number of characters in the maximum random number and turn that into the max length for the text field
-        return 1
+        return "\(MAX_RANDOM_NUMBER)".count 
     }
    
     
