@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var messageLabel: UILabel!
     
     // Constants
+    // add constant MIN_RANDOM_NUMBER using let and have it get 1
+    
+    // add constant MAX_RANDOM_NUMBER using let and have it get 9
+    
     // declare a variable called MAX_LENGTH_OF_TEXT_FIELD and place a block next to it that returns 1 this will be used in limiting the number of characters, when you place a {} block after a variable declaration, it creates a computed property, or a property who's value is calculated at run time, you can explicitly set getters and setters within the block using get {} and set(newValue) {} if you omit both get and set and return a value, it by default creates this return as a getter.  computed properties must explicitly be given a type, like var MAX_TEXT_FIELD_CHARS:Int { }
     var MAX_LENGTH_OF_TEXT_FIELD:Int {
         return 1
