@@ -48,6 +48,9 @@ extension ViewController:UITextFieldDelegate {
         // declare a constant called newLength that gets the text.count + the string.count - the range.length, this means that new length is equal to the existing text plus the new text minus the selected text.
         let newLength = text.count + string.count - range.length 
         // if newLength == 0 { disable guessButton} else {guessButton enable}
+        if newLength == 0 {guessButton.isEnabled = false}
+        else {guessButtion.isEnabled = true} 
+            
         
         // return newLength is less than or equal to MAX_LENGTH_OF_TEXT_FIELD, this will return true and say the new characters should be added only if the new number of characters is less than or equal to the max number of characters allowed
         return newLength <= MAX_LENGTH_OF_TEXT_FIELD 
