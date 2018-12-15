@@ -28,7 +28,7 @@ class ViewController: UIViewController {
 
 extension ViewController:UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        
+        guessButton.isEnabled = true 
     }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return true
