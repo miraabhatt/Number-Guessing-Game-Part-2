@@ -31,6 +31,7 @@ extension ViewController:UITextFieldDelegate {
         guessButton.isEnabled = true 
     }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // use a guard statement to unwrap textField.text and on else return true, this means that if the textfield is empty, then it will return true for should the new characters be added.
         return true
     }
 }
